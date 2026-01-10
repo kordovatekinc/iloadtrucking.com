@@ -35,14 +35,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out bg-black ${
         isScrolled 
-          ? "bg-black/95 backdrop-blur-md shadow-lg shadow-black/20 py-2" 
-          : "bg-transparent py-4"
+          ? "shadow-lg shadow-black/20 py-2" 
+          : "py-3"
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between min-h-[56px]">
           <Link
             to="/"
             className={`transition-all duration-500 ease-out transform ${
@@ -54,7 +54,7 @@ const Navbar = () => {
             <img 
               src="/logo-final.png" 
               alt="iLoad Trucking" 
-              className={`transition-all duration-500 ${showLogo ? "h-14" : "h-0"}`}
+              className={`transition-all duration-500 ${showLogo ? "h-12" : "h-0"}`}
             />
           </Link>
           

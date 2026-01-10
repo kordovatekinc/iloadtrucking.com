@@ -28,7 +28,7 @@ Message:
 ${formData.message}
     `.trim();
 
-    const mailtoLink = `mailto:Info@budgetcarrierinc.com?subject=Contact Form Message&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:sales@iloadtrucking.com?subject=Contact Form Message&body=${encodeURIComponent(emailBody)}`;
     window.location.href = mailtoLink;
 
     toast({
@@ -44,13 +44,13 @@ ${formData.message}
   };
 
   return (
-    <section id="contact" className="py-24 bg-slate-900 text-white">
+    <section id="contact" className="py-24 bg-black text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Get in Touch
+            Get in <span className="text-gold">Touch</span>
           </h2>
-          <p className="text-xl text-slate-300">
+          <p className="text-xl text-gray-400">
             Ready to optimize your freight logistics? Contact us today
           </p>
         </div>
@@ -59,75 +59,75 @@ ${formData.message}
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-3xl font-bold mb-6">Budget Carriers Inc.</h3>
-              <p className="text-slate-300 text-lg mb-8">
-                Serving Canada and the United States with reliable transportation solutions since 2014
+              <h3 className="text-3xl font-bold mb-6 text-gold">iLoad Trucking</h3>
+              <p className="text-gray-400 text-lg mb-8">
+                Asset-based transportation and logistics delivering dependable freight solutions across North America
               </p>
             </div>
 
             <div className="space-y-6">
-              <Card className="bg-white/5 border-white/10">
+              <Card className="bg-white/5 border-gold/20">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-white/10 rounded-lg">
-                      <MapPin className="w-6 h-6" />
+                    <div className="p-3 bg-gold/20 rounded-lg">
+                      <MapPin className="w-6 h-6 text-gold" />
                     </div>
                     <div>
                       <p className="font-semibold mb-1 text-white">Headquarters</p>
-                      <p className="text-slate-300">155 McDonald Street</p>
-                      <p className="text-slate-300">Regina, SK, Canada</p>
+                      <p className="text-gray-400">225 4 Ave E Unit B</p>
+                      <p className="text-gray-400">Regina, SK S4N 4X9</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white/5 border-white/10">
+              <Card className="bg-white/5 border-gold/20">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-white/10 rounded-lg">
-                      <Phone className="w-6 h-6" />
+                    <div className="p-3 bg-gold/20 rounded-lg">
+                      <Phone className="w-6 h-6 text-gold" />
                     </div>
                     <div>
                       <p className="font-semibold mb-1 text-white">Phone</p>
                       <a
-                        href="tel:+13062699777"
-                        className="text-slate-300 hover:text-white transition-colors text-lg"
+                        href="tel:+13062166224"
+                        className="text-gray-400 hover:text-gold transition-colors text-lg"
                       >
-                        (306) 269-9777
+                        (306) 216-6224
                       </a>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white/5 border-white/10">
+              <Card className="bg-white/5 border-gold/20">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-white/10 rounded-lg">
-                      <Mail className="w-6 h-6" />
+                    <div className="p-3 bg-gold/20 rounded-lg">
+                      <Mail className="w-6 h-6 text-gold" />
                     </div>
                     <div>
                       <p className="font-semibold mb-1 text-white">Email</p>
                       <a
-                        href="mailto:Info@budgetcarrierinc.com"
-                        className="text-slate-300 hover:text-white transition-colors"
+                        href="mailto:sales@iloadtrucking.com"
+                        className="text-gray-400 hover:text-gold transition-colors"
                       >
-                        Info@budgetcarrierinc.com
+                        sales@iloadtrucking.com
                       </a>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white/5 border-white/10">
+              <Card className="bg-white/5 border-gold/20">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-white/10 rounded-lg">
-                      <Clock className="w-6 h-6" />
+                    <div className="p-3 bg-gold/20 rounded-lg">
+                      <Clock className="w-6 h-6 text-gold" />
                     </div>
                     <div>
                       <p className="font-semibold mb-1 text-white">Dispatch</p>
-                      <p className="text-slate-300">24/7 Operations</p>
+                      <p className="text-gold font-semibold">24/7 Operations</p>
                     </div>
                   </div>
                 </CardContent>
@@ -136,7 +136,7 @@ ${formData.message}
 
             <div className="pt-6">
               <Link to="/solutions">
-                <Button className="bg-white text-slate-900 hover:bg-slate-100 w-full md:w-auto px-8 h-12 text-lg font-semibold">
+                <Button className="bg-gold text-black hover:bg-gold/90 w-full md:w-auto px-8 h-12 text-lg font-semibold">
                   Request a Quote
                 </Button>
               </Link>
@@ -144,12 +144,12 @@ ${formData.message}
           </div>
 
           {/* Contact Form */}
-          <Card className="bg-white border-0 shadow-2xl">
+          <Card className="bg-card border-gold/20 shadow-2xl">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Send us a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-2">Name</label>
+                  <label className="block text-sm font-semibold text-gray-300 mb-2">Name</label>
                   <Input
                     type="text"
                     name="name"
@@ -157,11 +157,11 @@ ${formData.message}
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="h-12 border-slate-300"
+                    className="h-12 bg-background border-border text-white placeholder:text-gray-500"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-2">Email</label>
+                  <label className="block text-sm font-semibold text-gray-300 mb-2">Email</label>
                   <Input
                     type="email"
                     name="email"
@@ -169,11 +169,11 @@ ${formData.message}
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="h-12 border-slate-300"
+                    className="h-12 bg-background border-border text-white placeholder:text-gray-500"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
+                  <label className="block text-sm font-semibold text-gray-300 mb-2">Message</label>
                   <Textarea
                     name="message"
                     placeholder="Tell us how we can help..."
@@ -181,10 +181,10 @@ ${formData.message}
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="border-slate-300"
+                    className="bg-background border-border text-white placeholder:text-gray-500"
                   />
                 </div>
-                <Button type="submit" className="w-full h-12 bg-slate-900 hover:bg-slate-800 text-white font-semibold">
+                <Button type="submit" className="w-full h-12 bg-gold hover:bg-gold/90 text-black font-semibold">
                   Send Message
                 </Button>
               </form>

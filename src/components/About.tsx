@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { CheckCircle2, Award, Target, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import warehouseImage from "@/assets/warehouse.jpg";
 
 const About = () => {
   const values = [
@@ -28,46 +27,49 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
-            About Budget Carriers
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white animate-fade-in-up">
+            About <span className="text-gold">iLoad Trucking</span>
           </h2>
-          <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-            Over a decade of excellence in Canadian transportation and logistics
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto animate-fade-in-up delay-100">
+            Asset-based transportation delivering dependable freight solutions across North America
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div className="order-2 md:order-1">
+          <div className="order-2 md:order-1 animate-fade-in-left">
             <img
-              src={warehouseImage}
-              alt="Budget Carriers warehouse facility"
-              className="rounded-2xl shadow-2xl w-full h-auto"
+              src="/A.png"
+              alt="iLoad Trucking fleet"
+              className="rounded-2xl shadow-2xl w-full h-auto border border-gold/20 transition-transform duration-500 hover:scale-[1.02]"
             />
           </div>
 
-          <div className="order-1 md:order-2 space-y-6 text-slate-700 text-lg">
+          <div className="order-1 md:order-2 space-y-6 text-gray-300 text-lg animate-fade-in-right">
             <p>
-              Founded in <strong className="text-slate-900">2014</strong>, Budget Carriers Inc. is a Canadian-owned transportation 
-              company headquartered in Regina, Saskatchewan. We've grown into a trusted leader in the 
-              trucking industry, delivering consistent, reliable freight solutions across Canada and the United States.
+              iLoad Trucking is an <strong className="text-gold">asset-based transportation and logistics company</strong> operating 
+              its own fleet of trucks and specialized trailers to deliver dependable freight solutions across North America.
             </p>
             <p>
-              Our commitment to excellence is backed by a <strong className="text-slate-900">modern, well-maintained fleet</strong>, 
-              experienced drivers, and a dedicated support team. From dry van to refrigerated loads, LTL to FTL, 
-              we offer flexible transportation options tailored to meet your unique needs.
+              As a <strong className="text-gold">Canada–U.S. bonded carrier</strong>, we focus on cross-border operations 
+              and time-sensitive freight, supporting customers that move goods between provinces, states, and international 
+              borders with consistency, compliance, and real-time visibility.
             </p>
             <p>
-              What sets us apart is our <strong className="text-slate-900">fully integrated operation</strong>. We own and operate 
-              state-of-the-art maintenance facilities and an expansive warehouse network spanning Regina, Mississauga, 
-              Winnipeg, and Calgary — offering end-to-end logistics solutions under one roof.
+              Our core services span TL, LTL, expedited shipments, cross-border freight, hazmat loads, and 
+              temperature-controlled transport. Beyond hauling freight, we provide <strong className="text-gold">full-service logistics</strong> including 
+              dispatch, scheduling, rate analysis, consulting, and billing.
+            </p>
+            <p>
+              With over <strong className="text-gold">10,000 sq ft of warehouse space</strong> across Regina, Saskatoon, Calgary, 
+              Mississauga, and San Diego, plus in-house fleet maintenance, we deliver end-to-end logistics solutions.
             </p>
             <div className="pt-4">
               <Link 
                 to="/compliance"
-                className="inline-flex items-center gap-2 text-slate-900 font-semibold hover:text-slate-700 transition-colors"
+                className="inline-flex items-center gap-2 text-gold font-semibold hover:text-gold/80 transition-colors"
               >
                 Learn about our CTPAT certification
                 <CheckCircle2 className="w-5 h-5" />
@@ -79,11 +81,11 @@ const About = () => {
         {/* Values */}
         <div className="grid md:grid-cols-4 gap-6">
           {values.map((value, index) => (
-            <Card key={index} className="border-2 border-slate-200 text-center hover:border-slate-900 transition-all">
+            <Card key={index} className="bg-card border-2 border-border text-center hover:border-gold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gold/10 animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
               <CardContent className="pt-6">
-                <value.icon className="w-12 h-12 mx-auto mb-4 text-slate-900" />
-                <h3 className="font-bold text-lg mb-2 text-slate-900">{value.title}</h3>
-                <p className="text-sm text-slate-600">{value.description}</p>
+                <value.icon className="w-12 h-12 mx-auto mb-4 text-gold transition-transform duration-300 group-hover:scale-110" />
+                <h3 className="font-bold text-lg mb-2 text-white">{value.title}</h3>
+                <p className="text-sm text-gray-400">{value.description}</p>
               </CardContent>
             </Card>
           ))}

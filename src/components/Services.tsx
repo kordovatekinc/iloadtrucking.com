@@ -6,63 +6,63 @@ import { Button } from "@/components/ui/button";
 const Services = () => {
   const services = [
     {
+      icon: Truck,
+      title: "Truckload (TL)",
+      description: "Dedicated trucks for full loads with direct routes and faster delivery",
+      link: "/fleet",
+    },
+    {
       icon: Box,
       title: "LTL Freight",
       description: "Cost-effective solutions for smaller loads with shared truck space",
       link: "/industries",
     },
     {
-      icon: Truck,
-      title: "FTL Services",
-      description: "Dedicated trucks for full loads with direct routes and faster delivery",
-      link: "/fleet",
-    },
-    {
-      icon: Thermometer,
-      title: "Refrigerated Transport",
-      description: "Temperature-controlled shipping for perishable and sensitive cargo",
-      link: "/fleet",
+      icon: Globe,
+      title: "Cross-Border",
+      description: "Seamless Canada-USA freight with CTPAT-certified bonded operations",
+      link: "/compliance",
     },
     {
       icon: Users,
-      title: "Team Drivers",
-      description: "Single and team driver options for your timeline requirements",
+      title: "Expedited",
+      description: "Time-sensitive freight with team driver options for urgent deliveries",
       link: "/careers",
     },
     {
-      icon: Globe,
-      title: "Cross-Border",
-      description: "Seamless Canada-USA freight with CTPAT-certified operations",
+      icon: Thermometer,
+      title: "Reefer & Dry Van",
+      description: "Temperature-controlled and dry van transport for all cargo types",
+      link: "/fleet",
+    },
+    {
+      icon: Shield,
+      title: "Hazmat",
+      description: "Certified hazardous materials transport with full compliance",
       link: "/compliance",
     },
     {
       icon: Warehouse,
       title: "Warehousing",
-      description: "Strategic storage facilities across Western and Central Canada",
+      description: "10,000+ sq ft across Regina, Saskatoon, Calgary, Mississauga, San Diego",
       link: "/locations",
     },
     {
       icon: Wrench,
       title: "Fleet Maintenance",
-      description: "In-house repair facilities ensuring maximum uptime and reliability",
+      description: "In-house inspections, diagnostics, and repairs for maximum uptime",
       link: "/fleet",
-    },
-    {
-      icon: Shield,
-      title: "Compliance",
-      description: "CTPAT-compliant operations meeting the highest security standards",
-      link: "/compliance",
     },
   ];
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-br from-slate-50 to-white">
+    <section id="services" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
-            Comprehensive Logistics Solutions
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white animate-fade-in-up">
+            Comprehensive <span className="text-gold">Logistics Solutions</span>
           </h2>
-          <p className="text-xl text-slate-700 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto animate-fade-in-up delay-100">
             Built for dependability, efficiency, and tailored solutions — no matter the size or complexity of your freight needs
           </p>
         </div>
@@ -70,24 +70,24 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {services.map((service, index) => (
             <Link key={index} to={service.link}>
-              <Card className="h-full border-2 border-slate-200 hover:border-slate-900 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer group">
+              <Card className="h-full bg-background border-2 border-border hover:border-gold hover:shadow-2xl hover:shadow-gold/10 transition-all duration-300 hover:-translate-y-2 cursor-pointer group animate-fade-in-up" style={{ animationDelay: `${index * 50}ms` }}>
                 <CardHeader>
-                  <div className="mb-4 p-4 bg-slate-900 w-fit rounded-lg group-hover:bg-slate-800 transition-colors">
-                    <service.icon className="w-8 h-8 text-white" />
+                  <div className="mb-4 p-4 bg-gold w-fit rounded-lg group-hover:bg-gold/90 transition-all duration-300 group-hover:scale-110">
+                    <service.icon className="w-8 h-8 text-black" />
                   </div>
-                  <CardTitle className="text-lg text-slate-900">{service.title}</CardTitle>
+                  <CardTitle className="text-lg text-white">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-slate-600">{service.description}</p>
+                  <p className="text-sm text-gray-400">{service.description}</p>
                 </CardContent>
               </Card>
             </Link>
           ))}
         </div>
 
-        <div className="text-center">
+        <div className="text-center animate-fade-in-up delay-500">
           <Link to="/solutions">
-            <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-white h-12 px-8 text-lg font-semibold">
+            <Button size="lg" className="bg-gold hover:bg-gold/90 text-black h-12 px-8 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gold/30">
               Request a Custom Quote
             </Button>
           </Link>

@@ -7,8 +7,8 @@ const Compliance = () => {
   const certifications = [
     {
       icon: Shield,
-      title: "CTPAT Certified",
-      description: "Customs-Trade Partnership Against Terrorism certification ensuring highest security standards for cross-border operations",
+      title: "Canada-U.S. Bonded",
+      description: "Fully bonded carrier for seamless cross-border freight between Canada and the United States",
     },
     {
       icon: Award,
@@ -78,40 +78,40 @@ const Compliance = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navbar />
       
       <div className="pt-24">
         {/* Hero Section */}
-        <section className="bg-slate-900 text-white py-20">
+        <section className="bg-black text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Compliance & Safety</h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Compliance & <span className="text-gold">Safety</span></h1>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Committed to the highest standards of safety, security, and regulatory compliance
             </p>
           </div>
         </section>
 
         {/* Certifications */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-card">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12 text-slate-900">
-                Certifications & Credentials
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">
+                Certifications & <span className="text-gold">Credentials</span>
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {certifications.map((cert, index) => (
-                  <Card key={index} className="border-2 border-slate-200">
+                  <Card key={index} className="border-2 border-gold/30 bg-background">
                     <CardHeader>
                       <div className="flex items-center gap-4">
-                        <div className="p-4 bg-slate-900 rounded-lg">
-                          <cert.icon className="w-8 h-8 text-white" />
+                        <div className="p-4 bg-gold rounded-lg">
+                          <cert.icon className="w-8 h-8 text-black" />
                         </div>
-                        <CardTitle className="text-2xl">{cert.title}</CardTitle>
+                        <CardTitle className="text-2xl text-white">{cert.title}</CardTitle>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-slate-700">{cert.description}</p>
+                      <p className="text-gray-400">{cert.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -121,19 +121,19 @@ const Compliance = () => {
         </section>
 
         {/* Safety Metrics */}
-        <section className="py-20 bg-slate-50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12 text-slate-900">
-                Safety Performance
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">
+                Safety <span className="text-gold">Performance</span>
               </h2>
               <div className="grid md:grid-cols-4 gap-6">
                 {safetyMetrics.map((metric, index) => (
-                  <Card key={index} className="border-0 shadow-lg text-center">
+                  <Card key={index} className="border-0 shadow-lg text-center bg-card border border-gold/20">
                     <CardContent className="pt-6">
-                      <metric.icon className="w-12 h-12 mx-auto mb-4 text-green-600" />
-                      <p className="text-3xl font-bold text-slate-900 mb-2">{metric.value}</p>
-                      <p className="text-sm text-slate-600">{metric.label}</p>
+                      <metric.icon className="w-12 h-12 mx-auto mb-4 text-gold" />
+                      <p className="text-3xl font-bold text-gold mb-2">{metric.value}</p>
+                      <p className="text-sm text-gray-400">{metric.label}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -143,23 +143,23 @@ const Compliance = () => {
         </section>
 
         {/* Compliance Standards */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-card">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12 text-slate-900">
-                Operational Standards
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">
+                Operational <span className="text-gold">Standards</span>
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {standards.map((standard, index) => (
-                  <Card key={index} className="border-2 border-slate-200">
+                  <Card key={index} className="border-2 border-gold/30 bg-background">
                     <CardHeader>
-                      <CardTitle className="text-xl">{standard.title}</CardTitle>
+                      <CardTitle className="text-xl text-gold">{standard.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <ul className="space-y-2">
                         {standard.items.map((item, i) => (
-                          <li key={i} className="flex items-start gap-3 text-slate-700">
-                            <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <li key={i} className="flex items-start gap-3 text-gray-300">
+                            <CheckCircle2 className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -172,51 +172,51 @@ const Compliance = () => {
           </div>
         </section>
 
-        {/* CTPAT Details */}
-        <section className="py-20 bg-slate-50">
+        {/* Cross-Border Capabilities */}
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <Shield className="w-16 h-16 mx-auto mb-6 text-slate-900" />
-                <h2 className="text-4xl font-bold mb-6 text-slate-900">CTPAT Certification</h2>
-                <p className="text-lg text-slate-700">
-                  Budget Carriers maintains CTPAT (Customs-Trade Partnership Against Terrorism) certification, 
-                  demonstrating our commitment to supply chain security and expedited border processing.
+                <Shield className="w-16 h-16 mx-auto mb-6 text-gold" />
+                <h2 className="text-4xl font-bold mb-6 text-white">Cross-Border <span className="text-gold">Capabilities</span></h2>
+                <p className="text-lg text-gray-400">
+                  As a Canada–U.S. bonded carrier, iLoad Trucking specializes in cross-border freight operations 
+                  with full customs compliance and efficient border processing.
                 </p>
               </div>
 
-              <Card className="border-2 border-slate-200">
+              <Card className="border-2 border-gold/30 bg-card">
                 <CardHeader>
-                  <CardTitle>What CTPAT Means for Your Shipments</CardTitle>
+                  <CardTitle className="text-white">What This Means for Your Shipments</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                      <CheckCircle2 className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-semibold text-slate-900 mb-1">Faster Border Crossings</h3>
-                        <p className="text-sm text-slate-700">Reduced inspection times and priority processing at customs</p>
+                        <h3 className="font-semibold text-white mb-1">Seamless Border Crossings</h3>
+                        <p className="text-sm text-gray-400">Efficient customs processing at Canada-U.S. borders</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                      <CheckCircle2 className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-semibold text-slate-900 mb-1">Enhanced Security</h3>
-                        <p className="text-sm text-slate-700">Rigorous security protocols protecting your cargo throughout transit</p>
+                        <h3 className="font-semibold text-white mb-1">Bonded Carrier Status</h3>
+                        <p className="text-sm text-gray-400">Fully bonded for international freight between Canada and the United States</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                      <CheckCircle2 className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-semibold text-slate-900 mb-1">Trusted Partner Status</h3>
-                        <p className="text-sm text-slate-700">Recognized by U.S. Customs and Border Protection as a low-risk carrier</p>
+                        <h3 className="font-semibold text-white mb-1">Documentation Support</h3>
+                        <p className="text-sm text-gray-400">Full assistance with PAPS, PARS, and customs paperwork</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                      <CheckCircle2 className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-semibold text-slate-900 mb-1">Supply Chain Integrity</h3>
-                        <p className="text-sm text-slate-700">Continuous monitoring and improvement of security measures</p>
+                        <h3 className="font-semibold text-white mb-1">North American Coverage</h3>
+                        <p className="text-sm text-gray-400">Strategic hubs in Regina, Saskatoon, Calgary, Mississauga, and San Diego</p>
                       </div>
                     </div>
                   </div>
@@ -227,21 +227,21 @@ const Compliance = () => {
         </section>
 
         {/* Insurance Information */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-card">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <AlertCircle className="w-16 h-16 mx-auto mb-6 text-slate-900" />
-              <h2 className="text-4xl font-bold mb-6 text-slate-900">Insurance & Liability</h2>
-              <p className="text-lg text-slate-700 mb-8">
+              <AlertCircle className="w-16 h-16 mx-auto mb-6 text-gold" />
+              <h2 className="text-4xl font-bold mb-6 text-white">Insurance & <span className="text-gold">Liability</span></h2>
+              <p className="text-lg text-gray-400 mb-8">
                 Your freight is protected by comprehensive cargo liability insurance, giving you peace of mind 
                 throughout the shipping process. We maintain coverage that meets or exceeds industry standards.
               </p>
-              <Card className="border-2 border-slate-200 text-left">
+              <Card className="border-2 border-gold/30 bg-background text-left">
                 <CardContent className="pt-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <h3 className="font-bold text-lg mb-2 text-slate-900">Coverage Details</h3>
-                      <ul className="space-y-2 text-slate-700">
+                      <h3 className="font-bold text-lg mb-2 text-gold">Coverage Details</h3>
+                      <ul className="space-y-2 text-gray-300">
                         <li>• $2M liability coverage</li>
                         <li>• All-risk cargo insurance</li>
                         <li>• Temperature failure protection</li>
@@ -249,8 +249,8 @@ const Compliance = () => {
                       </ul>
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg mb-2 text-slate-900">Claims Process</h3>
-                      <ul className="space-y-2 text-slate-700">
+                      <h3 className="font-bold text-lg mb-2 text-gold">Claims Process</h3>
+                      <ul className="space-y-2 text-gray-300">
                         <li>• 24-hour claim reporting</li>
                         <li>• Dedicated claims support</li>
                         <li>• Transparent investigation</li>

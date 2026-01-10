@@ -76,25 +76,25 @@ const Careers = () => {
   ];
 
   const handleApply = () => {
-    const mailtoLink = `mailto:Info@budgetcarrierinc.com?subject=Career Application - Budget Carriers Inc.`;
+    const mailtoLink = `mailto:hr@iloadtrucking.com?subject=Career Application - iLoad Trucking`;
     window.location.href = mailtoLink;
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navbar />
       
       <div className="pt-24">
         {/* Hero Section */}
-        <section className="bg-slate-900 text-white py-20">
+        <section className="bg-black text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Join Our Team</h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              Build your career with a growing Canadian transportation company committed to excellence
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Join Our <span className="text-gold">Team</span></h1>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+              Build your career with a growing North American transportation company committed to excellence
             </p>
             <Button 
               onClick={handleApply}
-              className="bg-white text-slate-900 hover:bg-slate-100 text-lg h-12 px-8"
+              className="bg-gold text-black hover:bg-gold/90 text-lg h-12 px-8 font-semibold"
             >
               Apply Now
             </Button>
@@ -102,23 +102,23 @@ const Careers = () => {
         </section>
 
         {/* Why Join Us */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-card">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold mb-4 text-slate-900">Why Budget Carriers?</h2>
-                <p className="text-lg text-slate-700">
+                <h2 className="text-4xl font-bold mb-4 text-white">Why <span className="text-gold">iLoad Trucking</span>?</h2>
+                <p className="text-lg text-gray-400">
                   We invest in our people because they drive our success
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {benefits.map((benefit, index) => (
-                  <Card key={index} className="border-2 border-slate-200 text-center hover:border-slate-900 transition-all">
+                  <Card key={index} className="border-2 border-border bg-background text-center hover:border-gold transition-all">
                     <CardContent className="pt-6">
-                      <benefit.icon className="w-12 h-12 mx-auto mb-4 text-slate-900" />
-                      <h3 className="font-bold text-lg mb-2 text-slate-900">{benefit.title}</h3>
-                      <p className="text-sm text-slate-600">{benefit.description}</p>
+                      <benefit.icon className="w-12 h-12 mx-auto mb-4 text-gold" />
+                      <h3 className="font-bold text-lg mb-2 text-white">{benefit.title}</h3>
+                      <p className="text-sm text-gray-400">{benefit.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -128,39 +128,39 @@ const Careers = () => {
         </section>
 
         {/* Company Culture */}
-        <section className="py-20 bg-slate-50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <Users className="w-16 h-16 mx-auto mb-6 text-slate-900" />
-                <h2 className="text-4xl font-bold mb-6 text-slate-900">Our Culture</h2>
-                <p className="text-lg text-slate-700">
-                  At Budget Carriers, we're more than a transportation company—we're a family of professionals 
+                <Users className="w-16 h-16 mx-auto mb-6 text-gold" />
+                <h2 className="text-4xl font-bold mb-6 text-white">Our <span className="text-gold">Culture</span></h2>
+                <p className="text-lg text-gray-400">
+                  At iLoad Trucking, we're more than a transportation company—we're a team of professionals 
                   dedicated to safety, reliability, and mutual respect. We believe in open communication, 
                   recognizing hard work, and creating opportunities for growth.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-3 gap-6">
-                <Card className="border-2 border-slate-200">
+                <Card className="border-2 border-gold/30 bg-card">
                   <CardContent className="pt-6 text-center">
-                    <TrendingUp className="w-10 h-10 mx-auto mb-3 text-slate-900" />
-                    <h3 className="font-bold mb-2 text-slate-900">Growth Focused</h3>
-                    <p className="text-sm text-slate-600">Continuous expansion creating new opportunities</p>
+                    <TrendingUp className="w-10 h-10 mx-auto mb-3 text-gold" />
+                    <h3 className="font-bold mb-2 text-white">Growth Focused</h3>
+                    <p className="text-sm text-gray-400">Continuous expansion creating new opportunities</p>
                   </CardContent>
                 </Card>
-                <Card className="border-2 border-slate-200">
+                <Card className="border-2 border-gold/30 bg-card">
                   <CardContent className="pt-6 text-center">
-                    <Shield className="w-10 h-10 mx-auto mb-3 text-slate-900" />
-                    <h3 className="font-bold mb-2 text-slate-900">Safety First</h3>
-                    <p className="text-sm text-slate-600">Your well-being is our top priority</p>
+                    <Shield className="w-10 h-10 mx-auto mb-3 text-gold" />
+                    <h3 className="font-bold mb-2 text-white">Safety First</h3>
+                    <p className="text-sm text-gray-400">Your well-being is our top priority</p>
                   </CardContent>
                 </Card>
-                <Card className="border-2 border-slate-200">
+                <Card className="border-2 border-gold/30 bg-card">
                   <CardContent className="pt-6 text-center">
-                    <Award className="w-10 h-10 mx-auto mb-3 text-slate-900" />
-                    <h3 className="font-bold mb-2 text-slate-900">Recognition</h3>
-                    <p className="text-sm text-slate-600">Performance rewards and appreciation programs</p>
+                    <Award className="w-10 h-10 mx-auto mb-3 text-gold" />
+                    <h3 className="font-bold mb-2 text-white">Recognition</h3>
+                    <p className="text-sm text-gray-400">Performance rewards and appreciation programs</p>
                   </CardContent>
                 </Card>
               </div>
@@ -169,29 +169,29 @@ const Careers = () => {
         </section>
 
         {/* Open Positions */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-card">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12 text-slate-900">
-                Current Openings
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">
+                Current <span className="text-gold">Openings</span>
               </h2>
 
               <div className="space-y-6">
                 {positions.map((position, index) => (
-                  <Card key={index} className="border-2 border-slate-200 hover:border-slate-900 transition-all">
+                  <Card key={index} className="border-2 border-border bg-background hover:border-gold transition-all">
                     <CardHeader>
                       <div className="flex justify-between items-start">
                         <div>
-                          <CardTitle className="text-2xl mb-2">{position.title}</CardTitle>
-                          <div className="flex gap-4 text-sm text-slate-600">
-                            <span className="font-semibold">{position.type}</span>
+                          <CardTitle className="text-2xl mb-2 text-white">{position.title}</CardTitle>
+                          <div className="flex gap-4 text-sm text-gray-400">
+                            <span className="font-semibold text-gold">{position.type}</span>
                             <span>•</span>
                             <span>{position.location}</span>
                           </div>
                         </div>
                         <Button 
                           onClick={handleApply}
-                          className="bg-slate-900 hover:bg-slate-800"
+                          className="bg-gold hover:bg-gold/90 text-black font-semibold"
                         >
                           Apply
                         </Button>
@@ -199,11 +199,11 @@ const Careers = () => {
                     </CardHeader>
                     <CardContent>
                       <div>
-                        <p className="font-semibold text-slate-900 mb-2">Requirements:</p>
+                        <p className="font-semibold text-white mb-2">Requirements:</p>
                         <ul className="grid md:grid-cols-2 gap-2">
                           {position.requirements.map((req, i) => (
-                            <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
-                              <div className="w-1.5 h-1.5 bg-slate-900 rounded-full mt-2 flex-shrink-0" />
+                            <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
+                              <div className="w-1.5 h-1.5 bg-gold rounded-full mt-2 flex-shrink-0" />
                               {req}
                             </li>
                           ))}
@@ -215,13 +215,13 @@ const Careers = () => {
               </div>
 
               <div className="mt-12 text-center">
-                <p className="text-slate-700 mb-4">
+                <p className="text-gray-400 mb-4">
                   Don't see a position that fits? We're always looking for talented professionals.
                 </p>
                 <Button 
                   onClick={handleApply}
                   variant="outline"
-                  className="border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white"
+                  className="border-2 border-gold text-gold hover:bg-gold hover:text-black"
                 >
                   Submit General Application
                 </Button>

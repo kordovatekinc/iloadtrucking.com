@@ -4,7 +4,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import TrackLoad from "./pages/TrackLoad";
 import Fleet from "./pages/Fleet";
 import Locations from "./pages/Locations";
 import Industries from "./pages/Industries";
@@ -24,7 +23,6 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/track" element={<TrackLoad />} />
           <Route path="/fleet" element={<Fleet />} />
           <Route path="/locations" element={<Locations />} />
           <Route path="/industries" element={<Industries />} />

@@ -67,34 +67,34 @@ const Resources = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navbar />
       
       <div className="pt-24">
         {/* Hero Section */}
-        <section className="bg-slate-900 text-white py-20">
+        <section className="bg-black text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Resources & Insights</h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Resources & <span className="text-gold">Insights</span></h1>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Industry knowledge, shipping guides, and logistics best practices
             </p>
           </div>
         </section>
 
         {/* Quick Guides */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-card">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12 text-slate-900">
-                Quick Reference Guides
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">
+                Quick Reference <span className="text-gold">Guides</span>
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {guides.map((guide, index) => (
-                  <Card key={index} className="border-2 border-slate-200 hover:border-slate-900 transition-all cursor-pointer">
+                  <Card key={index} className="border-2 border-border bg-background hover:border-gold transition-all cursor-pointer">
                     <CardContent className="pt-6 text-center">
-                      <guide.icon className="w-12 h-12 mx-auto mb-4 text-slate-900" />
-                      <h3 className="font-bold mb-2 text-slate-900">{guide.title}</h3>
-                      <p className="text-sm text-slate-600">{guide.description}</p>
+                      <guide.icon className="w-12 h-12 mx-auto mb-4 text-gold" />
+                      <h3 className="font-bold mb-2 text-white">{guide.title}</h3>
+                      <p className="text-sm text-gray-400">{guide.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -104,27 +104,27 @@ const Resources = () => {
         </section>
 
         {/* Articles */}
-        <section className="py-20 bg-slate-50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12 text-slate-900">
-                Industry Articles & Updates
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">
+                Industry Articles & <span className="text-gold">Updates</span>
               </h2>
 
               <div className="space-y-6">
                 {articles.map((article, index) => (
-                  <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all">
+                  <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all bg-card border border-gold/20">
                     <CardHeader>
                       <div className="flex items-start justify-between mb-2">
-                        <span className="px-3 py-1 bg-slate-900 text-white text-xs font-semibold rounded-full">
+                        <span className="px-3 py-1 bg-gold text-black text-xs font-semibold rounded-full">
                           {article.category}
                         </span>
-                        <span className="text-sm text-slate-500">{article.date}</span>
+                        <span className="text-sm text-gray-500">{article.date}</span>
                       </div>
-                      <CardTitle className="text-2xl">{article.title}</CardTitle>
+                      <CardTitle className="text-2xl text-white">{article.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-slate-700">{article.description}</p>
+                      <p className="text-gray-400">{article.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -134,71 +134,71 @@ const Resources = () => {
         </section>
 
         {/* FAQ Preview */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-card">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12 text-slate-900">
-                Frequently Asked Questions
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">
+                Frequently Asked <span className="text-gold">Questions</span>
               </h2>
 
               <div className="space-y-4">
-                <Card className="border-2 border-slate-200">
+                <Card className="border-2 border-gold/30 bg-background">
                   <CardContent className="pt-6">
-                    <h3 className="font-bold text-lg mb-2 text-slate-900">
+                    <h3 className="font-bold text-lg mb-2 text-gold">
                       What areas do you service?
                     </h3>
-                    <p className="text-slate-700">
+                    <p className="text-gray-300">
                       We provide comprehensive freight services throughout Canada and the United States, 
-                      with primary hubs in Regina SK, Mississauga ON, Winnipeg MB, and Calgary AB. 
+                      with hubs in Regina SK, Saskatoon SK, Calgary AB, Mississauga ON, and San Diego CA. 
                       Our network covers all major routes across North America.
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-slate-200">
+                <Card className="border-2 border-gold/30 bg-background">
                   <CardContent className="pt-6">
-                    <h3 className="font-bold text-lg mb-2 text-slate-900">
+                    <h3 className="font-bold text-lg mb-2 text-gold">
                       How do I get a shipping quote?
                     </h3>
-                    <p className="text-slate-700">
+                    <p className="text-gray-300">
                       Request a quote through our Solutions page by providing origin, destination, freight type, 
                       and weight. Our team will respond within 24 hours with competitive pricing and service options.
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-slate-200">
+                <Card className="border-2 border-gold/30 bg-background">
                   <CardContent className="pt-6">
-                    <h3 className="font-bold text-lg mb-2 text-slate-900">
+                    <h3 className="font-bold text-lg mb-2 text-gold">
                       Do you offer temperature-controlled shipping?
                     </h3>
-                    <p className="text-slate-700">
+                    <p className="text-gray-300">
                       Yes, we operate a fleet of refrigerated trailers capable of maintaining temperatures 
                       from -20°F to +70°F, ideal for perishable goods, pharmaceuticals, and temperature-sensitive cargo.
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-slate-200">
+                <Card className="border-2 border-gold/30 bg-background">
                   <CardContent className="pt-6">
-                    <h3 className="font-bold text-lg mb-2 text-slate-900">
+                    <h3 className="font-bold text-lg mb-2 text-gold">
                       What documents are required for cross-border shipping?
                     </h3>
-                    <p className="text-slate-700">
+                    <p className="text-gray-300">
                       Cross-border shipments typically require commercial invoice, bill of lading, PAPS/PARS numbers, 
                       and customs documentation. Our dispatch team assists with all paperwork to ensure smooth customs clearance.
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-slate-200">
+                <Card className="border-2 border-gold/30 bg-background">
                   <CardContent className="pt-6">
-                    <h3 className="font-bold text-lg mb-2 text-slate-900">
-                      How can I track my shipment?
+                    <h3 className="font-bold text-lg mb-2 text-gold">
+                      How can I get shipment updates?
                     </h3>
-                    <p className="text-slate-700">
-                      Use our Track Load page with your tracking number or reference number for real-time status updates. 
-                      You can also contact our dispatch team directly at (306) 269-9777 for immediate assistance.
+                    <p className="text-gray-300">
+                      Contact our dispatch team directly at (306) 216-6224 or email sales@iloadtrucking.com for 
+                      real-time status updates on your shipment. Our 24/7 dispatch is always available.
                     </p>
                   </CardContent>
                 </Card>

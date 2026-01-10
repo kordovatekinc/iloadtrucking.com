@@ -47,7 +47,7 @@ Additional Information:
 ${formData.message}
     `.trim();
 
-    const mailtoLink = `mailto:Info@budgetcarrierinc.com?subject=Freight Quote Request - ${formData.company}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:sales@iloadtrucking.com?subject=Freight Quote Request - ${formData.company}&body=${encodeURIComponent(emailBody)}`;
     window.location.href = mailtoLink;
 
     toast({
@@ -84,30 +84,30 @@ ${formData.message}
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navbar />
       
       <div className="pt-24">
         {/* Hero Section */}
-        <section className="bg-slate-900 text-white py-20">
+        <section className="bg-black text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Freight Solutions</h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Freight <span className="text-gold">Solutions</span></h1>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Customized transportation strategies designed to optimize your supply chain
             </p>
           </div>
         </section>
 
         {/* Solutions Overview */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-card">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {solutions.map((solution, index) => (
-                <Card key={index} className="border-2 border-slate-200 text-center hover:border-slate-900 transition-all">
+                <Card key={index} className="border-2 border-border bg-background text-center hover:border-gold transition-all">
                   <CardContent className="pt-6">
-                    <solution.icon className="w-12 h-12 mx-auto mb-4 text-slate-900" />
-                    <h3 className="font-bold text-lg mb-2 text-slate-900">{solution.title}</h3>
-                    <p className="text-sm text-slate-600">{solution.description}</p>
+                    <solution.icon className="w-12 h-12 mx-auto mb-4 text-gold" />
+                    <h3 className="font-bold text-lg mb-2 text-white">{solution.title}</h3>
+                    <p className="text-sm text-gray-400">{solution.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -116,26 +116,26 @@ ${formData.message}
         </section>
 
         {/* Quote Form */}
-        <section className="py-20 bg-slate-50">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold mb-4 text-slate-900">Request a Quote</h2>
-                <p className="text-lg text-slate-700">
+                <h2 className="text-4xl font-bold mb-4 text-white">Request a <span className="text-gold">Quote</span></h2>
+                <p className="text-lg text-gray-400">
                   Get a customized freight quote tailored to your specific shipping needs
                 </p>
               </div>
 
-              <Card className="border-0 shadow-xl">
-                <CardHeader className="bg-slate-900 text-white">
-                  <CardTitle className="text-2xl">Freight Quote Request Form</CardTitle>
+              <Card className="border-0 shadow-xl bg-card border border-gold/20">
+                <CardHeader className="bg-black text-white border-b border-gold/30">
+                  <CardTitle className="text-2xl text-gold">Freight Quote Request Form</CardTitle>
                 </CardHeader>
                 <CardContent className="p-8">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Company Info */}
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">
+                        <label className="block text-sm font-semibold text-gray-300 mb-2">
                           Company Name *
                         </label>
                         <Input
@@ -144,11 +144,11 @@ ${formData.message}
                           value={formData.company}
                           onChange={handleChange}
                           required
-                          className="h-11"
+                          className="h-11 bg-background border-border text-white"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">
+                        <label className="block text-sm font-semibold text-gray-300 mb-2">
                           Contact Name *
                         </label>
                         <Input
@@ -157,14 +157,14 @@ ${formData.message}
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="h-11"
+                          className="h-11 bg-background border-border text-white"
                         />
                       </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">
+                        <label className="block text-sm font-semibold text-gray-300 mb-2">
                           Email Address *
                         </label>
                         <Input
@@ -173,11 +173,11 @@ ${formData.message}
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="h-11"
+                          className="h-11 bg-background border-border text-white"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">
+                        <label className="block text-sm font-semibold text-gray-300 mb-2">
                           Phone Number *
                         </label>
                         <Input
@@ -186,18 +186,18 @@ ${formData.message}
                           value={formData.phone}
                           onChange={handleChange}
                           required
-                          className="h-11"
+                          className="h-11 bg-background border-border text-white"
                         />
                       </div>
                     </div>
 
                     {/* Shipment Details */}
-                    <div className="pt-6 border-t border-slate-200">
-                      <h3 className="text-lg font-bold text-slate-900 mb-4">Shipment Information</h3>
+                    <div className="pt-6 border-t border-border">
+                      <h3 className="text-lg font-bold text-gold mb-4">Shipment Information</h3>
                       
                       <div className="grid md:grid-cols-2 gap-6 mb-6">
                         <div>
-                          <label className="block text-sm font-semibold text-slate-700 mb-2">
+                          <label className="block text-sm font-semibold text-gray-300 mb-2">
                             Origin (City, Province/State) *
                           </label>
                           <Input
@@ -206,12 +206,12 @@ ${formData.message}
                             value={formData.origin}
                             onChange={handleChange}
                             required
-                            className="h-11"
+                            className="h-11 bg-background border-border text-white"
                             placeholder="Regina, SK"
                           />
                         </div>
                         <div>
-                          <label className="block text-sm font-semibold text-slate-700 mb-2">
+                          <label className="block text-sm font-semibold text-gray-300 mb-2">
                             Destination (City, Province/State) *
                           </label>
                           <Input
@@ -220,7 +220,7 @@ ${formData.message}
                             value={formData.destination}
                             onChange={handleChange}
                             required
-                            className="h-11"
+                            className="h-11 bg-background border-border text-white"
                             placeholder="Toronto, ON"
                           />
                         </div>
@@ -228,7 +228,7 @@ ${formData.message}
 
                       <div className="grid md:grid-cols-3 gap-6 mb-6">
                         <div>
-                          <label className="block text-sm font-semibold text-slate-700 mb-2">
+                          <label className="block text-sm font-semibold text-gray-300 mb-2">
                             Freight Type *
                           </label>
                           <select
@@ -236,18 +236,18 @@ ${formData.message}
                             value={formData.freight}
                             onChange={handleChange}
                             required
-                            className="w-full h-11 px-3 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-900"
+                            className="w-full h-11 px-3 bg-background border border-border rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gold"
                           >
                             <option value="">Select type</option>
                             <option value="General">General Freight</option>
                             <option value="Refrigerated">Refrigerated</option>
                             <option value="Dry Van">Dry Van</option>
-                            <option value="Flatbed">Flatbed</option>
+                            <option value="Hazmat">Hazmat</option>
                             <option value="Other">Other</option>
                           </select>
                         </div>
                         <div>
-                          <label className="block text-sm font-semibold text-slate-700 mb-2">
+                          <label className="block text-sm font-semibold text-gray-300 mb-2">
                             Weight (lbs) *
                           </label>
                           <Input
@@ -256,12 +256,12 @@ ${formData.message}
                             value={formData.weight}
                             onChange={handleChange}
                             required
-                            className="h-11"
+                            className="h-11 bg-background border-border text-white"
                             placeholder="e.g., 45000"
                           />
                         </div>
                         <div>
-                          <label className="block text-sm font-semibold text-slate-700 mb-2">
+                          <label className="block text-sm font-semibold text-gray-300 mb-2">
                             Service Type *
                           </label>
                           <select
@@ -269,17 +269,18 @@ ${formData.message}
                             value={formData.service}
                             onChange={handleChange}
                             required
-                            className="w-full h-11 px-3 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-900"
+                            className="w-full h-11 px-3 bg-background border border-border rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gold"
                           >
-                            <option value="FTL">FTL (Full Truckload)</option>
+                            <option value="FTL">TL (Truckload)</option>
                             <option value="LTL">LTL (Less than Truckload)</option>
                             <option value="Expedited">Expedited</option>
+                            <option value="Cross-Border">Cross-Border</option>
                           </select>
                         </div>
                       </div>
 
                       <div className="mb-6">
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">
+                        <label className="block text-sm font-semibold text-gray-300 mb-2">
                           Desired Pickup/Delivery Timeline *
                         </label>
                         <Input
@@ -288,13 +289,13 @@ ${formData.message}
                           value={formData.timeline}
                           onChange={handleChange}
                           required
-                          className="h-11"
+                          className="h-11 bg-background border-border text-white"
                           placeholder="e.g., Within 3 days, November 1-5, ASAP"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">
+                        <label className="block text-sm font-semibold text-gray-300 mb-2">
                           Additional Details
                         </label>
                         <Textarea
@@ -303,13 +304,14 @@ ${formData.message}
                           onChange={handleChange}
                           rows={4}
                           placeholder="Special handling requirements, frequency of shipments, etc."
+                          className="bg-background border-border text-white"
                         />
                       </div>
                     </div>
 
                     <Button 
                       type="submit" 
-                      className="w-full h-12 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-lg"
+                      className="w-full h-12 bg-gold hover:bg-gold/90 text-black font-semibold text-lg"
                     >
                       Request Quote
                     </Button>
@@ -321,24 +323,24 @@ ${formData.message}
         </section>
 
         {/* Service Comparison */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-card">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12 text-slate-900">
-                Choose the Right Service
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">
+                Choose the Right <span className="text-gold">Service</span>
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
-                <Card className="border-2 border-slate-200">
+                <Card className="border-2 border-gold/30 bg-background">
                   <CardHeader>
-                    <CardTitle className="text-2xl">FTL (Full Truckload)</CardTitle>
+                    <CardTitle className="text-2xl text-gold">TL (Truckload)</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-slate-700 mb-4">
+                    <p className="text-gray-400 mb-4">
                       Dedicated truck for your freight with direct routing and faster delivery
                     </p>
                     <div className="space-y-2 text-sm">
-                      <p className="font-semibold text-slate-900">Best for:</p>
-                      <ul className="space-y-1 text-slate-700">
+                      <p className="font-semibold text-white">Best for:</p>
+                      <ul className="space-y-1 text-gray-300">
                         <li>• Shipments over 10,000 lbs</li>
                         <li>• Time-sensitive deliveries</li>
                         <li>• High-value cargo</li>
@@ -348,17 +350,17 @@ ${formData.message}
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-slate-200">
+                <Card className="border-2 border-gold/30 bg-background">
                   <CardHeader>
-                    <CardTitle className="text-2xl">LTL (Less than Truckload)</CardTitle>
+                    <CardTitle className="text-2xl text-gold">LTL (Less than Truckload)</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-slate-700 mb-4">
+                    <p className="text-gray-400 mb-4">
                       Cost-effective solution for smaller shipments sharing truck space
                     </p>
                     <div className="space-y-2 text-sm">
-                      <p className="font-semibold text-slate-900">Best for:</p>
-                      <ul className="space-y-1 text-slate-700">
+                      <p className="font-semibold text-white">Best for:</p>
+                      <ul className="space-y-1 text-gray-300">
                         <li>• Shipments under 10,000 lbs</li>
                         <li>• Budget-conscious shipping</li>
                         <li>• Regular smaller loads</li>

@@ -41,7 +41,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-2 md:order-1 animate-fade-in-left">
             <img
-              src="/A.png"
+              src="/primary.png"
               alt="iLoad Trucking fleet"
               className="rounded-2xl shadow-2xl w-full h-auto border border-gold/20 transition-transform duration-500 hover:scale-[1.02]"
             />

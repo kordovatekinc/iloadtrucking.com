@@ -98,33 +98,40 @@ const ComplianceSection = () => {
             </div>
             
             <div className="space-y-4">
-              <Card className="border-2 border-gold/30 bg-black">
-                <CardContent className="pt-6">
-                  <div className="text-center">
-                    <div className="flex items-center justify-center gap-2 mb-2">
-                      <MapPin className="w-6 h-6 text-gold" />
-                      <div className="text-3xl font-bold text-gold">5</div>
+              {/* Small truck image */}
+              <div className="rounded-xl overflow-hidden border border-gold/30 shadow-lg">
+                <img 
+                  src="/A.png" 
+                  alt="iLoad Trucking" 
+                  className="w-full h-64 object-cover object-bottom"
+                />
+              </div>
+              <div className="grid grid-cols-3 gap-3">
+                <Card className="border border-gold/30 bg-black">
+                  <CardContent className="p-4">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-gold">5</div>
+                      <p className="text-xs text-gray-400">Hubs</p>
                     </div>
-                    <p className="text-sm text-gray-400">Strategic Hub Locations</p>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="border-2 border-gold/30 bg-black">
-                <CardContent className="pt-6">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-gold mb-2">10K+</div>
-                    <p className="text-sm text-gray-400">Sq Ft Warehouse Space</p>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="border-2 border-gold/30 bg-black">
-                <CardContent className="pt-6">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-gold mb-2">24/7</div>
-                    <p className="text-sm text-gray-400">Dispatch Operations</p>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+                <Card className="border border-gold/30 bg-black">
+                  <CardContent className="p-4">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-gold">10K+</div>
+                      <p className="text-xs text-gray-400">Sq Ft</p>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="border border-gold/30 bg-black">
+                  <CardContent className="p-4">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-gold">24/7</div>
+                      <p className="text-xs text-gray-400">Dispatch</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>

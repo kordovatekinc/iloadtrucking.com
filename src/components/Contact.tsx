@@ -28,7 +28,7 @@ Message:
 ${formData.message}
     `.trim();
 
-    const mailtoLink = `mailto:sales@iloadtrucking.com?subject=Contact Form Message&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:services@iloadtrucking.com?subject=Contact Form Message&body=${encodeURIComponent(emailBody)}`;
     window.location.href = mailtoLink;
 
     toast({
@@ -109,10 +109,10 @@ ${formData.message}
                     <div>
                       <p className="font-semibold mb-1 text-white">Email</p>
                       <a
-                        href="mailto:sales@iloadtrucking.com"
+                        href="mailto:services@iloadtrucking.com"
                         className="text-gray-400 hover:text-gold transition-colors"
                       >
-                        sales@iloadtrucking.com
+                        services@iloadtrucking.com
                       </a>
                     </div>
                   </div>

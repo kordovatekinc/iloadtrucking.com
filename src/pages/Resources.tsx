@@ -197,7 +197,7 @@ const Resources = () => {
                       How can I get shipment updates?
                     </h3>
                     <p className="text-gray-300">
-                      Contact our dispatch team directly at (306) 216-6224 or email sales@iloadtrucking.com for 
+                      Contact our dispatch team directly at (306) 216-6224 or email services@iloadtrucking.com for 
                       real-time status updates on your shipment. Our 24/7 dispatch is always available.
                     </p>
                   </CardContent>

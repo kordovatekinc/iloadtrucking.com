@@ -30,8 +30,8 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center gap-2 text-gray-400">
                   <Mail className="w-4 h-4 text-gold" />
-                  <a href="mailto:sales@iloadtrucking.com" className="hover:text-gold transition-colors">
-                    sales@iloadtrucking.com
+                  <a href="mailto:services@iloadtrucking.com" className="hover:text-gold transition-colors">
+                    services@iloadtrucking.com
                   </a>
                 </div>
               </div>
@@ -106,7 +106,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:sales@iloadtrucking.com" className="hover:text-gold transition-colors">
+                  <a href="mailto:services@iloadtrucking.com" className="hover:text-gold transition-colors">
                     Email Us
                   </a>
                 </li>

@@ -47,7 +47,7 @@ Additional Information:
 ${formData.message}
     `.trim();
 
-    const mailtoLink = `mailto:sales@iloadtrucking.com?subject=Freight Quote Request - ${formData.company}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:services@iloadtrucking.com?subject=Freight Quote Request - ${formData.company}&body=${encodeURIComponent(emailBody)}`;
     window.location.href = mailtoLink;
 
     toast({
